@@ -1,0 +1,845 @@
+@font-face {
+    font-family: "fuente";
+    src: url(../fuente/Louis\ George\ Cafe\ Light.ttf);
+}
+
+@font-face {
+    font-family: "fuente2";
+    src: url(../fuente/benguiat-book-bt.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+nav{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, rgb(0, 0, 94), black);
+    display: flex;
+   
+}
+    nav>div{
+        width: 33%;
+    }
+    #wrapper-logo{
+        width: 120px;
+        justify-content: flex-end;
+    }
+        #wrapper-logo img{
+            width: 100%;
+            padding: 15px 20px;
+            justify-content: flex-start;
+        }
+        
+    #wrapper-elements-menu{
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }   
+        .element-menu{
+            font-family: fuente;
+            color: white;
+            font-size: 23px;
+            margin-left: 20px;
+            padding: 35px 0px;
+            
+        }
+
+        .element-menu:hover{
+            font-weight: bold;
+        }
+
+    #logo-2{
+        display: flex;
+        justify-content: flex-end;
+    }    
+      
+    #wrapper-logo-2{
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 10px;
+    }  
+        #wrapper-logo-2 img{
+            width: 100%;
+            justify-content: center;
+            align-items: flex-end;
+        }  
+
+#banner-home {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-image: url('../img/banners-01.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0px 0px 15px 0px;
+}   
+
+#banner-home-2{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-image: url('../img/Imagen\ 2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0px 0px 15px 0px;
+}
+
+#banner-home-3{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background-image: url('../img/Imagen\ 3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  
+}
+
+#subtítulo{
+    width: 650px;
+    padding: 250px 0px 0px 0px;
+}
+
+#subtítulo-1{
+    width: 650px;
+    padding: 150px 0px 0px 0px;
+}
+       
+#header-home{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url(../img/Fondo.jpg);
+    background-size: cover;
+
+} 
+
+#header-home1{
+    width: 100%;
+    height: 800px;
+    background-image: url(../img/historia/Fondo\ historia.jpg);
+    justify-content: center;
+    background-size: cover;
+}
+
+
+#header-home2{
+    width: 100%;
+    background-image: url(../img/historia/Fondo\ historia.jpg);
+    justify-content: center;
+    background-size: cover;
+}
+
+#wrapper-element-footer{
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, black, rgb(0, 0, 75));
+    display: flex;
+    text-align: right;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+    .element-footer{
+        padding: 0px 0px;
+        margin-left: 60px;
+    }
+
+#Título-historia{
+    justify-content: center;
+}    
+    .tipografía-historia{
+        font-family: fuente2;
+        color: white;
+        font-size: 90px;
+        padding: 60px 0px 60px;
+        letter-spacing: 3px;
+        font-weight: 100;
+        text-align: center;
+        text-shadow: 0 0 10px white;
+    }
+
+
+.fondo-img{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.opciones{
+    width: 20%;
+    overflow: hidden;
+    position: relative;
+}
+
+.opciones > img{
+    width: 100%;
+}
+
+.opciones a img{
+    width: 100%;
+}
+
+/*galería*/
+
+.carrusel{
+    width: 90%;
+    margin: auto;
+}
+
+.fotos-galería{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.fotos-galería .flecha-izq,
+.fotos-galería .flecha-der{
+    position: absolute;
+    border: none;
+    background: rgba(0,0,0,0.3);
+    font-size: 55px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: rgb(237, 28, 36);
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.fotos-galería .flecha-izq:hover,
+.fotos-galería .flecha-der:hover{
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.fotos-galería .flecha-izq{
+    left: 0;
+}
+
+.fotos-galería .flecha-der{
+    right: 0;
+}
+
+.fotos-galería .carrusel{
+    width: 90%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+}
+
+.fotos-galería .carrusel .fotos-galería-img{
+    min-width: 33.8%;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.fotos-galería .carrusel .fotos-galería-img.hover{
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.fotos-galería .carrusel .fotos-galería-img img{
+    width: 95%;
+    vertical-align: top;
+}
+
+.título-capitulo{
+    font-family: fuente;
+    color: white;
+}
+
+/*galería*/
+
+#ver-más{
+    padding: 0px 0px;
+}
+
+#fondo-personajes{
+    width: 100%;
+    background-size: cover;
+    background-image: url(../img/historia/Personajes/Fondo.png);
+
+}
+
+.info-personajes{
+    display: flex;
+}
+
+
+.nombres-personajes{
+    font-family: fuente;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 90px;
+    text-align: center;
+    padding: 0px 0px 30px;
+}
+
+.párrafo-personajes{
+    font-family: fuente;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    font-size: 30px;
+    text-align: center
+}
+
+#contenido{
+    padding: 200px 45px 100px;
+}
+
+#volver{
+    justify-content: center;
+    display: flex;
+}
+
+/*---La desaparición de Will Byers--*/
+.overlay2, .overlay3, .overlay4, .overlay5, .overlay6, .overlay7 {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlay2.active, .overlay3.active, .overlay4.active, .overlay5.active, .overlay6.active, .overlay7.active {
+    visibility: visible;
+}
+
+.popup2, .popup3, .popup4, .popup5, .popup6, .popup7 {
+    text-align: center;
+    padding: 20px;
+    line-height: 30px;
+}
+
+
+.popupa {
+    width: 700px;
+    box-shadow: 0 0 15px rgb(237, 28, 36);
+}
+
+.btn-cerrar-popup1, .btn-cerrar-popup2, .btn-cerrar-popup3, .btn-cerrar-popup4, .btn-cerrar-popup5, .btn-cerrar-popup6 {
+    font-size: 30px;
+    line-height: 50px;
+    display: block;
+    text-align: right;
+    color: rgb(237, 28, 36);
+}
+
+.btn-cerrar-popup1:hover, .btn-cerrar-popup2:hover, .btn-cerrar-popup3:hover, .btn-cerrar-popup4:hover, .btn-cerrar-popup5:hover, .btn-cerrar-popup6:hover {
+    color: rgb(255, 89, 95);
+}
+
+/*--suscríbete--*/
+
+.suscribete{
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+}
+
+.tipografía-sub1{
+    font-family: fuente;
+    color: white;
+    font-size: 70px; 
+    font-weight: bold;
+    padding: 0 0 20px;
+    text-shadow: 0 0 10px white;
+    letter-spacing: 3px;
+}
+
+.tipografía-newsletter{
+    color: rgb(237, 28, 36);
+    text-shadow: 0 0 10px red;
+}
+
+.tipografía-sub2{
+    font-family: fuente;
+    color: white;
+    font-size: 50px;
+    font-weight: lighter;
+    padding: 0 0 50px;
+}
+
+.tipografía-sub3{
+    font-family: fuente;
+    color: white;
+    display: flex;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 0px 70px 50px 70px;
+    text-shadow: 0 0 10px white;
+}
+
+#header-home3{
+    width: 100%;
+    height: 605px;
+    background-image: url(../img/historia/Fondo\ historia.jpg);
+    justify-content: center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.suscribete  .btn-abrir-popup {
+	padding: 0 20px;
+	margin-bottom: 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #fff;
+	background: rgb(237, 28, 36);
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+	cursor: pointer;
+}
+
+.suscribete .btn-abrir-popup:hover {
+    box-shadow: 0 0 10px rgb(237, 28, 36);
+}    
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlay.active{
+    visibility: visible;
+}
+
+.popup {
+    background: linear-gradient(to bottom, rgb(0, 0, 94), black);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.9);
+    border-radius: 3px;
+    font-family: fuente;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    width: 600px;
+    transition: .5s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+
+}
+
+.popup .btn-cerrar-popup{
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: rgb(237, 28, 36);
+    transition: .3s ease all;
+}
+
+.popup .btn-cerrar-popup:hover {
+    text-shadow: 0 0 10px rgb(237, 28, 36);
+}
+
+.popup h3{
+    font-size: 36px;
+    margin-bottom: 30px;
+    opacity: 0;
+}
+
+.popup form .contenedor-inputs {
+    opacity: 0;
+}
+
+.popup form .contenedor-inputs input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    font-family: fuente;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+
+.popup form .btn-submit{
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: white;
+    background: rgb(237, 28, 36);
+    border-radius: 3px;
+    font-family: fuente;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s ease all; 
+    opacity: 0;
+}
+
+.popup form .btn-submit:hover{
+    box-shadow: 0 0 10px rgb(237, 28, 36);
+}
+
+.popup.active{
+    opacity: 1;
+    transform: scale(1);
+}
+.popup.active h3{
+    animation: entradaTitulo .8s ease .5s forwards;
+}
+
+.popup.active .contenedor-inputs{
+    animation: entradaInputs .8s ease .5s forwards;
+}
+
+.popup.active .btn-submit {
+    animation: entradaSubmit .8s ease .5s forwards;
+}
+
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaInputs {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes entradaSubmit {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*--suscríbete--*/
+
+
+
+@media (max-width: 1024px) {
+
+/* Inicio */
+
+    #banner-home{
+        height: 300px;
+        background-image: url('../img/banners-01.jpg');
+    }
+
+    #banner-home-2{
+        height: 300px;
+        background-image: url('../img/Imagen\ 2.png');
+    }
+
+    #banner-home-3{
+        height: 300px;
+        background-image: url('../img/Imagen\ 3.png');
+    }
+
+    #subtítulo{
+        width: 450px;
+        padding: 200px 0 0 0;
+    }
+
+    #subtítulo-1{
+        width: 450px;
+        padding: 195px 0 0 0;
+    }
+
+/* Historia */    
+
+    #header-home1{
+       background-position: center; 
+       height: 950px;
+    }
+
+    #header-home2{
+        background-position: center; 
+        height: 1750px;
+     }
+
+    .opciones{
+        width: 45%;
+    }
+
+/* Galería */     
+
+    .fotos-galería .carrusel{
+        overflow: visible;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fotos-galería-img{
+        width: 95%;
+        padding: 10px 15px;
+    }
+
+    .fotos-galería .flecha-izq,
+    .fotos-galería .flecha-der{
+        display: none;
+    }
+
+
+/* Personajes */
+
+    .info-personajes{
+        align-items: center;
+    }
+
+    .img-personajes{
+        width: 40%;
+    }
+
+    .img-personajes-2{
+        width: 40%;
+    }
+
+    .nombres-personajes{
+        font-size: 50px;
+    }
+
+    .párrafo-personajes{
+        font-size: 20px;
+    }
+
+    .tipografía-sub3{
+        font-size: 35px;
+    }
+
+@media (max-width: 768px) {
+    #banner-home{
+        height: 300px;
+        background-image: url('../img/inicio/768\ px.png')
+    }
+
+    #banner-home-2{
+        height: 300px;
+        background-image: url('../img/inicio/768-2.png');
+    }
+
+    #banner-home-3{
+        height: 300px;
+        background-image: url('../img/inicio/768-3.png');
+    }
+
+    #subtítulo{
+        width: 450px;
+        padding: 200px 0 0 0;
+    }
+
+    #subtítulo-1{
+        width: 450px;
+        padding: 195px 0 0 0;
+    }
+
+    #header-home1{
+        background-position: center;
+        height: 3300px;
+    }
+
+    #header-home2{
+        background-position: center; 
+        height: 1s550px;
+     }
+
+    #header-home3{
+        height: 800px;
+    }
+
+     .fotos-galería .carrusel{
+        overflow: visible;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0px 0px 0 33px;
+        justify-items: center;
+    }
+
+    .fotos-galería-img{
+        width: 95%;
+        padding: 10px 0;
+    }
+
+    .fotos-galería .flecha-izq,
+    .fotos-galería .flecha-der{
+        display: none;
+    }
+
+    #contenido{
+        padding: 80px 20px;
+    }
+
+    .opciones{
+        width: 45%;
+    }
+
+    .tipografía-sub3{
+        display: block;
+        font-size: 45px;
+    }
+
+    .popupa{
+        width: 700px;
+    }
+    
+
+@media (max-width: 500px) {
+    nav{
+        height: 200px;
+    }
+
+    #menú{
+        height: 30px;
+        padding: 100px 0px 0px;
+    }
+
+    #wrapper-logo{
+        padding: 25px 0px 0px 40px;
+        width: 150px;
+    }
+
+    nav>div{
+        height: 50%;
+    }
+
+    #wrapper-logo-2 {
+        padding: 100px 10px 10px;
+    }
+
+    #wrapper-logo-2 img{
+        padding: 0px 35px 40px 0px;
+        width: 170px;
+    }
+
+    #banner-home{
+        height: 300px;
+        background-image: url('../img/inicio/480\ px.png');
+    }
+
+    #banner-home-2{
+        height: 300px;
+        background-image: url('../img/inicio/480-2.png');
+    }
+
+    #banner-home-3{
+        height: 300px;
+        background-image: url('../img/inicio/480-3.png');
+    }
+
+    #subtítulo{
+        width: 450px;
+        padding: 200px 0 0 0;
+    }
+
+    #subtítulo-1{
+        width: 450px;
+        padding: 195px 0 0 0;
+    }
+
+    .fotos-galería-img{
+        width: 90%;
+        padding: 0px 0px 35px 0px;
+    }
+
+    #header-home1{
+        background-position: center;
+        height: 2400px;
+        background-size: cover;
+    }
+
+    #header-home2{
+        background-position: center; 
+        height: 2760px;
+    }
+
+    #header-home3{
+        height: 1000px;
+    }
+
+    .tipografía-historia{
+        font-size: 70px;
+    }
+
+    .opciones{
+        width: 80%;
+    }
+
+    .img-personajes{
+        width: 90%;
+        padding: 0px 50px 0px 0px;
+    }
+
+    .img-personajes-2{
+        width: 90%;
+        padding: 0px 0px 0px 50px;
+    }
+
+    .info-personajes{
+        display: flex;
+        flex-direction: column;
+    }
+
+        .info-personajes  #contenido{
+            order: 2;
+        }
+
+        .info-personajes  .img-personajes .img-personajes-2{
+            order: 1;
+        }
+
+    .popupa{
+        width: 400px;
+    }    
+}
